@@ -1,6 +1,7 @@
 import { useState } from "react";
 import './App.css';
 import Modal from "./components/Modal";
+import Profile from "./components/Profile";
 
 function App() {
   let [title, setTitle] = useState(["이것은", "글제목", "리스트"]);
@@ -69,6 +70,8 @@ function App() {
 
       <input type="text" onChange={(e) => { onChange(e.target.value) }} />
       <button onClick={ addPost }>추가</button>
+
+      <Profile />
  
       { showModal ? <Modal index={ index } title={ title } bgColor={ "orange" } modifyPost={ modifyPost } /> : null }
     </div>

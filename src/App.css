@@ -20,6 +20,10 @@
   border-bottom: 1px solid grey;
 }
 
+.list h3 {
+  margin-top: 0;
+}
+
 .modal {
   margin-top: 20px;
   padding: 20px;
