@@ -2,6 +2,19 @@
   text-align: center;
 }
 
+.main-bg {
+  height: 300px;
+  background: url("./assets/images/bg.png") 50% 50%;
+  background-size: cover;
+}
+
+.me-auto a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
