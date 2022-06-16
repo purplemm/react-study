@@ -3,7 +3,8 @@ import ShoesCard from "../components/ShoesCard";
 import axios from "axios";
 
 function Main(props){
-    console.log(props.setShoes());
+    let [moreBtn, setMoreBtn] = useState(true);
+    console.log(props.shoes);
     // ajax 방법 3가지
     // 1. XMLHttpRequest
     // 2. fetch() : json 형식으로 바꿔줘야하는 과정이 있다.
@@ -14,8 +15,7 @@ function Main(props){
         .then((result) => { 
             let newData = [...props.shoes, ...result.data];
             props.setShoes(newData);
-
-            // 이곳에서 state 안쓰려고 props로 작업하려다가 에러났고 여기까지 하고 퇴근한다
+            setMoreBtn(false);
         })    
         // catch는 실패일 경우
         .catch(() => { console.log("실패") });              
@@ -35,7 +35,11 @@ function Main(props){
                     }
                 </div>
 
-                <button onClick={() => { moreList() }}>더보기</button>
+                {
+                    moreBtn
+                    ? <button onClick={() => { moreList() }}>더보기</button>
+                    : null
+                }
             </div> 
         </Fragment>  
     )
