@@ -4,7 +4,7 @@ function Modal(props){
             <h4>{ props.title[props.index] }</h4>
             <p>날짜</p>
             <p>상세내용</p>
-            <button onClick={ props.postModify }>글수정</button>
+            <button onClick={ props.modifyPost }>글수정</button>
         </div>
     )
 }
