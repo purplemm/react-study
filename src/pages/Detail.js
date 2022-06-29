@@ -43,6 +43,16 @@ function Detail(props){
 
     useEffect(() => {
         setTimeout(() => {setFade("end")}, 100);
+
+        // 최근 본 상품 id localstorage에 저장
+        let watchedList = localStorage.getItem("watched");
+        watchedList = JSON.parse(watchedList);
+        watchedList.push(id);
+        watchedList = new Set(watchedList);
+        watchedList = Array.from(watchedList);
+        localStorage.setItem("watched", JSON.stringify(watchedList));
+        console.log(watchedList);
+
         return () => {setFade("")}
     }, []);
 

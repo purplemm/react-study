@@ -37,7 +37,7 @@ function Main(props){
 
                 {
                     moreBtn
-                    ? <button onClick={() => { moreList() }}>더보기</button>
+                    ? <button onClick={ moreList }>더보기</button>
                     : null
                 }
             </div> 
